@@ -1,0 +1,193 @@
+
+#===============================================================
+#
+# ALIASES AND FUNCTIONS
+#
+# Arguably, some functions defined here are quite big
+# (ie 'lowercase') but my workstation has 512Meg of RAM, so .....
+# If you want to make this file smaller, these functions can
+# be converted into scripts.
+#
+# Many functions were taken (almost) straight from the bash-2.04
+# examples.
+#
+#===============================================================
+
+#-------------------
+# system independent linux aliases
+#-------------------
+
+#alias rm='rm -i'
+#alias cp='cp -i'
+alias cls='clear'
+alias c='clear'
+alias mv='mv -i'
+
+alias lo='logout'
+
+# -> Prevents accidentally clobbering files.
+alias h='history'
+alias j='jobs -l'
+alias r='rlogin'
+alias which='type -all'
+alias ..='cd ..'
+alias path='echo -e ${PATH//:/\\n}'
+alias print='/usr/bin/lp -o nobanner -d $LPDEST'   # Assumes LPDEST is defined 
+alias pjet='enscript -h -G -fCourier9 -d $LPDEST'  # Pretty-print using enscript
+alias background='xv -root -quit -max -rmode 5' # put a picture in the background
+alias vim='gvim'
+alias vi='gvim'
+alias du='du -h'
+alias df='df -kh'
+alias ps='ps -a'
+
+# The 'ls' family (this assumes you use the GNU ls)
+alias ls='ls -hF --color'	# add colors for filetype recognition
+alias ll='ls -hFl --color'	# add colors for filetype recognition and lists all
+alias lx='ls -lXB'		# sort by extension
+alias lk='ls -lSr'		# sort by size
+alias la='ls -Al'		# show hidden files
+alias lr='ls -lR'		# recursice ls
+alias lt='ls -ltr'		# sort by date
+alias lm='ls -al |more'		# pipe through 'more'
+alias tree='tree -Cs'		# nice alternative to 'ls'
+alias l='ls -CF'
+
+alias dir='ls --color=auto --format=vertical'
+alias vdir='ls --color=auto --format=long'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# tailoring 'less'
+alias more='less'
+export PAGER=less
+export LESSCHARSET='latin1'
+export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-' # Use this if lesspipe.sh exists
+export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
+:stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
+
+#-----------------------------------------------------------
+## account logins 
+#-----------------------------------------------------------
+function stdlogin()
+{
+	if [ "$1" = "ssh" ]
+	then
+		ssh -XYC janoos@stdlogin.cse.ohio-state.edu
+	else
+		# mount using sshfs
+		sshfs janoos@stdlogin.cse.ohio-state.edu:/home/7/janoos  ~/cse -o uid=$EUID 
+	fi
+	return;
+	
+	
+	# old method - not used
+	if [[ $(hostname -s) != "virtuallight" ]] 
+	then
+		# mount using smbfs 
+		mount -t smbfs //cowboy.cse.ohio-state.edu/janoos ~/cse -o credentials=/home/fj/.smbcredentials,uid=1000,gid=1000
+ 	elif [[ $(hostname -s) != "descartes" ]] 
+	then
+		sshfs janoos@stdlogin.cse.ohio-state.edu:/home/7/janoos  ~/cse -o uid=$EUID 
+	else
+		echo "descartes uses a smbfs in fstab to mount cse share"
+	fi
+}
+
+
+function radimres113()
+{
+	if [ "$1" = "ssh" ]
+	then
+		ssh -XYC firdaus@radimres113.med.ohio-state.edu
+ 	else 
+		sshfs firdaus@radimres113.med.ohio-state.edu:/home/firdaus  ~/radimres113 -o uid=$EUID  
+	fi
+}
+
+function glenn()
+{
+	if [ "$1" = "ssh" ]
+	then
+		ssh -XYC osu5388@glenn.osc.edu
+ 	else
+		echo "loading glenn sshfs	"
+		sshfs osu5388@glenn.osc.edu:/nfs/09/osu5388  ~/glenn -o uid=$EUID  
+	fi
+}
+
+function descartes()
+{
+	if [[ "$1" = "w" || "$1" = "W" ]]
+	then
+		rdesktop descartes.cse.ohio-state.edu -u fj -g 1450x1150&
+	elif [[ "$1" = "ssh" ]]
+	then
+		ssh -XYC fj@descartes.cse.ohio-state.edu
+	else
+		sshfs fj@descartes.cse.ohio-state.edu:/media/FJ  ~/descartes -o  uid=$EUID 
+	fi
+}
+
+function virtuallight()
+{
+	if [ "$1" = "ssh" ]
+	then
+		ssh -XYC fj@virtuallight.cse.ohio-state.edu
+ 	else
+		echo "loading virtuallight sshfs	"
+		sshfs fj@virtuallight.cse.ohio-state.edu:/home/fj  ~/virtuallight -o uid=$EUID  
+	fi
+}
+
+alias gatekeeper='ssh -XYC fjanoos@gatekeeper.bwh.harvard.edu'
+
+if [ -n xtitle ]
+then
+	alias top='xtitle Processes on $HOST && top';
+	make='xtitle Making $(basename $PWD) ; make';
+fi
+
+alias ps_me='ps  auxw | egrep `whoami`'
+
+#----------------------------------------------
+# git aliases
+#------------------------------------------------
+
+alias gla='git lola'
+alias gpull='HOME= git pull'
+alias gpush='HOME= git push'
+# alias g='git'
+# alias gco='git checkout'
+# alias gpo='git push origin'
+# alias gcmp='gcm && gpo'
+# alias gcd='gco develop'
+# alias gb='git branch'
+# alias gba='gb -a'
+# alias ga='git add'
+# alias gai='git add -i'
+# alias gap='git add -p'
+# alias gc='git commit'
+# alias gcm='git commit -m Checkpoint commit.'
+# alias gpu='git push'
+# alias gpl='git pull'
+# alias gs='git status'
+# alias gd='git diff'
+# alias gdc='git diff --cached'
+# alias gg='git grep -n'
+# alias gds='git diff --staged'
+# alias gre='git checkout -- '
+# alias gus='git reset HEAD'
+# alias gll='git lol'
+# alias gla='git lola'
+# alias gpod='gpo develop'
+# alias gpom='gpo master'
+# Git FuggedaboutIt (let's push it live)
+alias gfi='git add -A && git commit -m "Checkpoint." && git push'
+alias glog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+
+gk() {
+	   (gitk > /dev/null 2>&1) &
+   }

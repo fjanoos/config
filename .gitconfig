@@ -1,0 +1,22 @@
+[user]
+	name = osu5388
+	email = firdaus@ieee.org
+[alias]
+	co = checkout
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[core]
+	editor = nano
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+[push]
+	default = current
+[diff]
+	tool = diff
+[merge]
+	tool = diff
+[difftool]
+	prompt = false
