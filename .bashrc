@@ -21,6 +21,7 @@ export LD_RUN_PATH=$CUDA_HOME/lib64:$HOME/software/lib:$HOME/software/lib64:$LD_
 
 
 alias notebook='jupyter notebook --ip=*'
+alias tf='source activate tf0.10.0'
 
 #------------------------------------------
 #  interactive jobs
@@ -29,7 +30,7 @@ alias notebook='jupyter notebook --ip=*'
 function ijob()
 {
     echo 'walltime='$1:00:00
-    qsub -I -X -l nodes=1:ppn=12:gpus=4 -l walltime=$1:00:00 -l mem=48GB
+    qsub -I -X -l nodes=1:ppn=12:gpus=2 -l walltime=$1:00:00 -l mem=64GB
 }
 
 #alias ijob='qsub -I -X -l nodes=1:ppn=12:gpus=2 -l walltime=24:00:00 -l mem=48GB'
