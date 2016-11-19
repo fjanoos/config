@@ -7,6 +7,7 @@
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [core]
 	editor = nano
+	excludesfile = /home/ubuntu/config/.gitignore
 [color]
 	diff = auto
 	status = auto
