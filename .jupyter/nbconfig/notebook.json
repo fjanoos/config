@@ -1,10 +1,13 @@
 {
   "load_extensions": {
     "keyboard_shortcut_editor/main": true,
-    "runtools/main": true,
+    "select_keymap/main": true,
+    "contrib_nbextensions_help_item/main": true,
+    "toggle_all_line_numbers/main": true,
     "rubberband/main": true,
+    "runtools/main": true,
     "codefolding/main": true,
-    "toggle_all_line_numbers/main": true
+    "nbextensions_configurator/config_menu/main": true
   },
   "kse_show_rebinds": true,
   "kse_rebinds": {
