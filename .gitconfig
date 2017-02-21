@@ -18,6 +18,6 @@
 [diff]
 	tool = diff
 [merge]
-	tool = diff
+	tool = tortoisemerge
 [difftool]
 	prompt = false
