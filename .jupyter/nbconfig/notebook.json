@@ -1,28 +1,29 @@
 {
+  "load_extensions": {
+    "rubberband/main": true,
+    "contrib_nbextensions_help_item/main": true,
+    "select_keymap/main": false,
+    "keyboard_shortcut_editor/main": true,
+    "nbextensions_configurator/config_menu/main": true,
+    "codefolding/main": true,
+    "toggle_all_line_numbers/main": true,
+    "runtools/main": true,
+    "code_font_size/code_font_size": true
+  },
+  "kse_show_rebinds": true,
   "stored_keymap": "sublime",
   "kse_rebinds": {
     "edit": [
       {
-        "to": "f2",
-        "action_name": "jupyter-notebook:restart-kernel-and-clear-output"
+        "action_name": "jupyter-notebook:restart-kernel-and-clear-output",
+        "to": "f2"
       }
     ],
     "command": [
       {
-        "to": "f2",
-        "action_name": "jupyter-notebook:restart-kernel-and-clear-output"
+        "action_name": "jupyter-notebook:restart-kernel-and-clear-output",
+        "to": "f2"
       }
     ]
-  },
-  "kse_show_rebinds": true,
-  "load_extensions": {
-    "rubberband/main": true,
-    "toggle_all_line_numbers/main": true,
-    "select_keymap/main": false,
-    "codefolding/main": true,
-    "runtools/main": true,
-    "keyboard_shortcut_editor/main": true,
-    "nbextensions_configurator/config_menu/main": true,
-    "contrib_nbextensions_help_item/main": true
   }
 }
