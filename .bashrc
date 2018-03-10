@@ -49,3 +49,6 @@ alias beast='ssh firdaus@69.46.234.57'
 
 
 
+
+# added by Anaconda3 4.2.0 installer
+export PATH="/home/fj/anaconda3/bin:$PATH"
