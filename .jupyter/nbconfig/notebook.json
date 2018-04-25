@@ -1,14 +1,14 @@
 {
   "load_extensions": {
-    "rubberband/main": true,
-    "contrib_nbextensions_help_item/main": true,
-    "select_keymap/main": false,
+    "rubberband/main": false,
+    "contrib_nbextensions_help_item/main": false,
+    "select_keymap/main": true,
     "keyboard_shortcut_editor/main": true,
     "nbextensions_configurator/config_menu/main": true,
     "codefolding/main": true,
-    "toggle_all_line_numbers/main": true,
+    "toggle_all_line_numbers/main": false,
     "runtools/main": true,
-    "code_font_size/code_font_size": true
+    "code_font_size/code_font_size": false
   },
   "kse_show_rebinds": true,
   "stored_keymap": "sublime",

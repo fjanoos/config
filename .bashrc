@@ -21,6 +21,8 @@ export LD_RUN_PATH=$CUDA_HOME/lib64:$HOME/software/lib:$HOME/software/lib64:$LD_
 alias notebook='jupyter notebook --ip=*'
 alias tf='source activate tf0.10.0'
 
+. ~/config/.git_aliases
+
 #------------------------------------------
 #  interactive jobs
 #-------------------------------------------
