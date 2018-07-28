@@ -21,3 +21,5 @@
 	tool = diff
 [difftool]
 	prompt = false
+[credential]
+	helper = cache

@@ -12,11 +12,13 @@
 #chang the directory color on oakley
 export LS_COLORS=$LS_COLORS'di=0;31:'
 
-export GLIBC=$HOME/software/glibc-2.23
-export PATH=$HOME/software/cuda-7.5/bin:/nfs/09/osu5388/anaconda3/bin:$HOME/software/bin:$PATH
-export CUDA_HOME=$HOME/software/cuda-7.5
-export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$HOME/software/lib:$HOME/software/lib64:$LD_LIBRARY_PATH
-export LD_RUN_PATH=$CUDA_HOME/lib64:$HOME/software/lib:$HOME/software/lib64:$LD_RUN_PATH
+# the below are for osu machines
+
+#export GLIBC=$HOME/software/glibc-2.23
+#export PATH=$HOME/software/cuda-7.5/bin:/nfs/09/osu5388/anaconda3/bin:$HOME/software/bin:$PATH
+#export CUDA_HOME=$HOME/software/cuda-7.5
+#export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$HOME/software/lib:$HOME/software/lib64:$LD_LIBRARY_PATH
+#export LD_RUN_PATH=$CUDA_HOME/lib64:$HOME/software/lib:$HOME/software/lib64:$LD_RUN_PATH
 
 alias notebook='jupyter notebook --ip=*'
 alias tf='source activate tf0.10.0'
