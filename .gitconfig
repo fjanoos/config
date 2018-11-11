@@ -1,5 +1,5 @@
 [user]
-	name = fjanoos
+	name = ubuntu
 	email = firdaus@ieee.org
 [alias]
 	co = checkout
@@ -21,3 +21,4 @@
 	tool = tortoisemerge
 [difftool]
 	prompt = false
+[credential]
