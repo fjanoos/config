@@ -28,6 +28,9 @@ alias gpom='gpo master'
 # Git FuggedaboutIt (let's push it live)
 alias gfi='git add -A && git commit -m "Checkpoint." && git push'
 
+alias gpm='git commit . -m "pre merge commit"; git pull'
+alias gfi='git add .; git commit -m "checkpoint" '
+
 gk() {
                    (gitk > /dev/null 2>&1) &
    }
