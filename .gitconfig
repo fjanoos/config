@@ -1,5 +1,5 @@
 [user]
-	name = fjanoos
+	name = ubuntu
 	email = firdaus@ieee.org
 [alias]
 	co = checkout
@@ -7,6 +7,7 @@
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [core]
 	editor = nano
+	excludesfile = /home/ubuntu/config/.gitignore
 [color]
 	diff = auto
 	status = auto
@@ -17,6 +18,7 @@
 [diff]
 	tool = diff
 [merge]
-	tool = diff
+	tool = tortoisemerge
 [difftool]
 	prompt = false
+[credential]
