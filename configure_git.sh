@@ -3,7 +3,9 @@
 # set up for me
 git config --global user.email firdaus@ieee.org
 git config --global user.name $(id -nu)
-git config --global credential.helper cache
+#git config --global credential.helper  cache # only 15 mins
+# permanently cache github credentials in cleartext
+git config --global credential.helper store
 
 # customize
 git config --global color.diff auto
