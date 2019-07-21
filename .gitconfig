@@ -1,5 +1,5 @@
 [user]
-	name = ubuntu
+	name = fjanoos
 	email = firdaus@ieee.org
 [alias]
 	co = checkout
@@ -7,7 +7,7 @@
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [core]
 	editor = nano
-	excludesfile = /home/ubuntu/config/.gitignore
+	excludesfile = ~/config/.gitignore
 [color]
 	diff = auto
 	status = auto
@@ -22,3 +22,4 @@
 [difftool]
 	prompt = false
 [credential]
+        helper = cache

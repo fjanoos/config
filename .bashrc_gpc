@@ -1,0 +1,3 @@
+# -- gpc specific bash configurations ----
+
+export PORTAL=10.128.0.2

@@ -1,4 +1,6 @@
-ln -s ~/config/.tmux.conf ~/.tmux.conf
-ln -s ~/config/.gitconfig ~/.gitconfig
-ln -s ~/config/.git-prompt.sh ~/.git-prompt.sh
-ln -s ~/config/.gitignore ~/.gitignore
+cp ~/config/.bashrc ~/
+ln -b -s ~/config/.tmux.conf -t ~/
+#ln -b -s ~/config/.gitconfig -t ~/
+~/config/configure_git.sh
+ln -b -s ~/config/.git-prompt.sh -t ~/
+ln -b -s ~/config/.gitignore -t ~/
