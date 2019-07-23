@@ -1,7 +1,7 @@
 {
   "load_extensions": {
     "rubberband/main": false,
-    "contrib_nbextensions_help_item/main": false,
+    "contrib_nbextensions_help_item/main": true,
     "select_keymap/main": true,
     "keyboard_shortcut_editor/main": true,
     "nbextensions_configurator/config_menu/main": true,
@@ -25,5 +25,12 @@
         "to": "f2"
       }
     ]
+  },
+  "keys": {
+    "command": {
+      "bind": {
+        "f2": "jupyter-notebook:restart-kernel-and-clear-output"
+      }
+    }
   }
 }

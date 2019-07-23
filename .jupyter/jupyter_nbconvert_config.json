@@ -11,7 +11,8 @@
       ".",
       "/home/ubuntu/anaconda3/lib/python3.5/site-packages/jupyter_contrib_nbextensions/templates",
       "/home/ubuntu/anaconda3/envs/fj/lib/python3.5/site-packages/jupyter_contrib_nbextensions/templates",
-      "/home/ubuntu/anaconda3/envs/tf0.11.0/lib/python3.5/site-packages/jupyter_contrib_nbextensions/templates"
+      "/home/ubuntu/anaconda3/envs/tf0.11.0/lib/python3.5/site-packages/jupyter_contrib_nbextensions/templates",
+      "/home/fjanoos/local/conda3/lib/python3.7/site-packages/jupyter_contrib_nbextensions/templates"
     ]
   },
   "version": 1
