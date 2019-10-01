@@ -108,8 +108,8 @@ PS1='[\u@\h \#] \w >'
 #----------------------------------------------------------------------
 # Alias definitions.
 #----------------------------------------------------------------------
-if [ -f ~/.bashrc_aliases ]; then
-    . ~/.bashrc_aliases
+if [ -f ~/config/.bashrc_aliases ]; then
+    . ~/config/.bashrc_aliases
 fi
 
 #---------------------------------------------------------------------
@@ -269,9 +269,13 @@ fi
 #----------------------------------------------------------------------
 
 #find replace
-function find_replace()
+function find_functions()
 {
-echo "find /home/fj/personal/personal/ -name "entries" -type f -exec sed -i 's/SEARCH_STR/REPLACE_STR/g' {} \;"
+echo "find <path> -name <name> -type f -exec sed -i 's/SEARCH_STR/REPLACE_STR/g' {} \;"
+echo "see this https://www.cyberciti.biz/faq/howto-finding-files-by-date/" 
+echo "find <path> '*.pdf' -atime +60 -type -f"
+echo "find -exec rm -f {} \;"
+echo "find -delete -maxdepth 1" 
 }
 
 #usage - killps(procname)
@@ -279,6 +283,9 @@ function killps()
 {
 	ps -ef | grep $1 | awk '// { print $2 }'|xargs kill -s 9
 }
+
+
+# find by access time
 
 
 #build a latex document

@@ -8,7 +8,8 @@
     "codefolding/main": true,
     "toggle_all_line_numbers/main": false,
     "runtools/main": true,
-    "code_font_size/code_font_size": false
+    "code_font_size/code_font_size": false,
+    "code_prettify/code_prettify": true
   },
   "kse_show_rebinds": true,
   "stored_keymap": "sublime",
@@ -31,6 +32,11 @@
       "bind": {
         "f2": "jupyter-notebook:restart-kernel-and-clear-output"
       }
+    }
+  },
+  "Cell": {
+    "cm_config": {
+      "lineNumbers": true
     }
   }
 }

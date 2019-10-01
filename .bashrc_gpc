@@ -1,7 +1,7 @@
 # -- gpc specific bash configurations ----
 
 export PORTAL=10.128.0.2
-export PYTHONPATH='/home/fjanoos/cloud'
+export PYTHONPATH='/home/fjanoos/cloud:/home/fjanoos/cloud/code'
 export JUPYTER_PATH=$PYTHONPATH:$JUPYTER_PATH
 alias notebook='jupyter notebook --no-browser'
 
