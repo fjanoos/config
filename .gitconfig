@@ -1,13 +1,6 @@
 [user]
-	name = fjanoos
 	email = firdaus@ieee.org
-[alias]
-	co = checkout
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-[core]
-	editor = nano
-	excludesfile = ~/config/.gitignore
+	name = fjanoos
 [color]
 	diff = auto
 	status = auto
@@ -15,11 +8,17 @@
 	interactive = auto
 [push]
 	default = current
+[core]
+	editor = nano
 [diff]
 	tool = diff
 [merge]
-	tool = tortoisemerge
+	tool = diff
 [difftool]
 	prompt = false
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	co = checkout
 [credential]
-        helper = cache
+	helper = store
