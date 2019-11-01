@@ -70,6 +70,10 @@ export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-' # Use this if lesspipe.sh exists
 export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
 :stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
 
+# pushd / popd
+alias pd=pushd
+alias ppd=popd
+
 
 alias gatekeeper='ssh -XYC fjanoos@gatekeeper.bwh.harvard.edu'
 
