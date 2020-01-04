@@ -6,6 +6,8 @@ git config --global user.name $(id -nu)
 #git config --global credential.helper  cache # only 15 mins
 # permanently cache github credentials in cleartext
 git config --global credential.helper store
+# set the gitignore file globally
+git config --global core.excludesfile ~/.gitignore
 
 # customize
 git config --global color.diff auto
@@ -25,6 +27,7 @@ git config --global alias.lol "log --graph --decorate --pretty=oneline --abbrev-
 git config --global alias.lola "log --graph --decorate --pretty=oneline --abbrev-commit --all"
 git config --global alias.co checkout
 
+## all this is already in bash_aliases ## --- 
 # set up bash aliases; presumes ~/.bashrc sources ~/.bash_aliases
 #echo "
 #alias glog='git lola'
