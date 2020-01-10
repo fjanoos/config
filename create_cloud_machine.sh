@@ -89,7 +89,7 @@ chmod au+x Anaconda3-2019.10-Linux-x86_64.sh
 ### Install conda packages into main enviroment ###
 conda deactivate
 #while read requirement; do conda install --yes $requirement; done < conda_requirements.txt 2>error.log
-pip install numpy numba torch 
+pip install numpy numba torch tensorboard
 conda install arrow joblib pandas matplotlib jupyter memory_profiler pyarrow
 conda install -c conda-forge jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
@@ -98,11 +98,12 @@ jupyter nbextension enable codefolding/main
 # conda env create -f ~/config/environment.yml
 
 # install xarray from github
-conda uninstall xarray
-cd ~/software 
-git clone https://github.com/pydata/xarray.git
-cd xarray
-git pull origin master
-python setup.py develop 
+#conda uninstall xarray
+#cd ~/software 
+#git clone https://github.com/pydata/xarray.git
+#cd xarray
+#git pull origin master
+#python setup.py develop 
+
 # do updates
 conda update --all
