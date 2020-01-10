@@ -22,12 +22,12 @@ echo "# FJ's standard setup for gpc machines
 " > .bashrc
 
 # create soft links
-ln -s config/.gitconfig -t ~
-ln -s config/.gitignore -t ~
-ln -s config/.git-prompt.sh -t ~
-ln -s config/.ipython -t ~
-ln -s config/.jupyter -t ~
-ln -s config/.tmux.conf -t ~
+ln -s ~/config/.gitconfig -t ~
+ln -s ~/config/.gitignore -t ~
+ln -s ~/config/.git-prompt.sh -t ~
+ln -s ~/config/.ipython -t ~
+ln -s ~/config/.jupyter -t ~
+ln -s ~/config/.tmux.conf -t ~
 
 #  ### setup the ssh keys #######################################
 
