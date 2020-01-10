@@ -94,6 +94,8 @@ conda install arrow joblib pandas matplotlib jupyter memory_profiler pyarrow
 conda install -c conda-forge jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
 jupyter nbextension enable codefolding/main
+# add any other dependencies ... optional
+# conda env create -f ~/config/environment.yml
 
 # install xarray from github
 conda uninstall xarray
