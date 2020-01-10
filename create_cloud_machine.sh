@@ -30,7 +30,7 @@ ln -s ~/config/.jupyter -t ~
 ln -s ~/config/.tmux.conf -t ~
 
 #  ### setup the ssh keys #######################################
-
+chmod 0400 id_rsa
 # copy over gpc.ppk into the id_rsa file
 echo "-----BEGIN RSA PRIVATE KEY-----
 Proc-Type: 4,ENCRYPTED
@@ -69,8 +69,8 @@ ssh-add ~/.ssh/id_rsa
 
 
 # copy over code and data from the old machine
-export SOURCE_MACHINE=34.69.120.115
-SOURCE_HOME='/home/fjanoos/local'
+export SOURCE_MACHINE=<set your Ip here>
+export SOURCE_HOME='/home/fjanoos/'
 
 rsync -axrv fjanoos@$SOURCE_MACHINE:$SOURCE_HOME/cloud ~
 rsync -axrv fjanoos@$SOURCE_MACHINE:$SOURCE_HOME/collabs ~
