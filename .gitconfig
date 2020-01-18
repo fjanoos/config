@@ -10,7 +10,7 @@
 	default = current
 [core]
 	editor = nano
-	excludesfile = $HOME/config/.gitignore
+	excludesfile = ~/.gitignore
 [diff]
 	tool = diff
 [merge]
