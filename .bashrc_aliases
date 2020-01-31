@@ -62,6 +62,9 @@ alias egrep='egrep --color=auto'
 
 alias samba='/etc/init.d/smbd'
 
+# start adn stop gnome desktop (start/stop)
+alias gnome='sudo service gdm' 
+
 # tailoring 'less'
 alias more='less'
 export PAGER=less
@@ -74,8 +77,6 @@ export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
 alias pd=pushd
 alias ppd=popd
 
-
-alias gatekeeper='ssh -XYC fjanoos@gatekeeper.bwh.harvard.edu'
 
 if [ -n xtitle ]
 then
