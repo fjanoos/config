@@ -62,8 +62,10 @@ alias egrep='egrep --color=auto'
 
 alias samba='/etc/init.d/smbd'
 
-# start adn stop gnome desktop (start/stop)
+# ----- personal linux machine configurations -----
+# start and stop gnome desktop (start/stop)
 alias gnome='sudo service gdm' 
+alias off='sudo systemctl hibernate'
 
 # tailoring 'less'
 alias more='less'
