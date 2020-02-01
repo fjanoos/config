@@ -105,13 +105,6 @@ PS1='[\u@\h \#] \w >'
 
 
 
-#----------------------------------------------------------------------
-# Alias definitions.
-#----------------------------------------------------------------------
-if [ -f ~/config/.bashrc_aliases ]; then
-    . ~/config/.bashrc_aliases
-fi
-
 #---------------------------------------------------------------------
 # Programmable completion features 
 #----------------------------------------------------------------------
@@ -271,60 +264,21 @@ fi
 #find replace
 function find_functions()
 {
-echo "find <path> -name <name> -type f -exec sed -i 's/SEARCH_STR/REPLACE_STR/g' {} \;"
-echo "see this https://www.cyberciti.biz/faq/howto-finding-files-by-date/" 
-echo "find <path> '*.pdf' -atime +60 -type -f"
-echo "find -exec rm -f {} \;"
-echo "find -delete -maxdepth 1" 
+  echo "find <path> -name <name> -type f -exec sed -i 's/SEARCH_STR/REPLACE_STR/g' {} \;"
+  echo "see this https://www.cyberciti.biz/faq/howto-finding-files-by-date/" 
+  echo "find <path> '*.pdf' -atime +60 -type -f"
+  echo "find -exec rm -f {} \;"
+  echo "find -delete -maxdepth 1" 
 }
 
 #usage - killps(procname)
 function killps()
 {
-	ps -ef | grep $1 | awk '// { print $2 }'|xargs kill -s 9
+  ps -ef | grep $1 | awk '// { print $2 }'|xargs kill -s 9
 }
 
 
 # find by access time
-
-
-#build a latex document
-function latexfj () {
-	echo "building $1"
-	latexmk $1".tex"
-	dvips -Ppdf -G0 $1".dvi"
-	if [ "$2" = "pdf" ] ; then
-             ps2pdf -dMaxSubsetPct=100 -dCompatibilityLevel=1.4 -dSubsetFonts=true -dEmbedAllFonts=true -dAutoFilterColorImages=false -dAutoFilterGrayImages=false -dColorImageFilter=/FlateEncode -dGrayImageFilter=/FlateEncode -dMonoImageFilter=/FlateEncode -dPDFSETTINGS=/prepress $1.ps $1.pdf
-  		evince $1".pdf"        &
-        else
-		evince $1".ps"        &
-	fi
-	
-}
-
-function addpath () {
-        if ! echo $PATH | /bin/egrep -q "(^|:)$1($|:)" ; then		
-        	if [ "$2" = "after" ] ; then
-              		PATH=$PATH:$1		
-	       else
-		   PATH=$1:$PATH
-	       fi
-        fi
-}
-
-
-function ed()
-{
-	if [ -x /usr/bin/gedit ]; then
-		gedit $1 &
-	else
-		vi $1 &
-	fi
-
-}
-
-
-
 
 function untar()
 {
