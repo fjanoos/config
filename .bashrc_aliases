@@ -67,6 +67,23 @@ alias sleep='sudo pm-hibernate'
 alias off='sudo shutdown -h now'
 alias reboot='sudo shutdown -r now'
 
+# -- nvidia stuff ---
+alias nvidia = watch -n 1 nvidia-smi
+function nvidia_reset()
+{
+ # reset nvidia drivers on awake from sleep
+ # from https://github.com/tensorflow/tensorflow/issues/5777
+ # Also see 99ZZ_nvidia_awake
+    rmmod nvidia_uvm
+	rmmod nvidia_drm
+	rmmod nvidia_modeset
+	rmmod nvidia
+	modprobe nvidia
+	modprobe nvidia_modeset
+	modprobe nvidia_drm
+	modprobe nvidia_uvm
+}
+
 # tailoring 'less'
 alias more='less'
 export PAGER=less
