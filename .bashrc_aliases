@@ -68,7 +68,7 @@ alias off='sudo shutdown -h now'
 alias reboot='sudo shutdown -r now'
 
 # -- nvidia stuff ---
-alias nvidia = watch -n 1 nvidia-smi
+alias nvidia="watch -n 1 nvidia-smi"
 function nvidia_reset()
 {
  # reset nvidia drivers on awake from sleep
