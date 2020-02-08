@@ -266,6 +266,7 @@ function find_functions()
 {
   echo "find <path> -name <name> -type f -exec sed -i 's/SEARCH_STR/REPLACE_STR/g' {} \;"
   echo "see this https://www.cyberciti.biz/faq/howto-finding-files-by-date/" 
+  echo "Following command will print the list of all pdf file that were accessed in last 60 days:"
   echo "find <path> '*.pdf' -atime +60 -type -f"
   echo "find -exec rm -f {} \;"
   echo "find -delete -maxdepth 1" 

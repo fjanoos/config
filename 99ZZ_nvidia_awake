@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# script to reset nvidia drivers on awake
+# based on combining this https://askubuntu.com/questions/226278/run-script-on-wakeup
+# with this shit see https://github.com/tensorflow/tensorflow/issues/5777
+# put this file in /usr/lib/pm-utils/sleep.d
+
+
+case "$1" in
+    resume)
+        rmmod nvidia_uvm
+		rmmod nvidia_drm
+		rmmod nvidia_modeset
+		rmmod nvidia
+		modprobe nvidia
+		modprobe nvidia_modeset
+		modprobe nvidia_drm
+		modprobe nvidia_uvm
+esac
