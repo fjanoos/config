@@ -5,6 +5,9 @@
 # with this shit see https://github.com/tensorflow/tensorflow/issues/5777
 # put this file in /usr/lib/pm-utils/sleep.d
 
+# BEWARE - THIS CAN MESS WITH HIBERNATIONtmux 
+
+
 
 case "$1" in
     resume)

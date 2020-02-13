@@ -74,14 +74,14 @@ function nvidia_reset()
  # reset nvidia drivers on awake from sleep
  # from https://github.com/tensorflow/tensorflow/issues/5777
  # Also see 99ZZ_nvidia_awake
-    rmmod nvidia_uvm
-	rmmod nvidia_drm
-	rmmod nvidia_modeset
-	rmmod nvidia
-	modprobe nvidia
-	modprobe nvidia_modeset
-	modprobe nvidia_drm
-	modprobe nvidia_uvm
+    sudo rmmod nvidia_uvm
+	sudo rmmod nvidia_drm
+	sudo rmmod nvidia_modeset
+	sudo rmmod nvidia
+	sudo modprobe nvidia
+	sudo modprobe nvidia_modeset
+	sudo modprobe nvidia_drm
+	sudo modprobe nvidia_uvm
 }
 
 # tailoring 'less'
