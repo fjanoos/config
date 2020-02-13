@@ -15,6 +15,3 @@ export PYTHONPATH='$HOME/cloud:$HOME/cloud/code'
 export JUPYTER_PATH=$PYTHONPATH:$JUPYTER_PATH
 alias notebook='jupyter notebook --no-browser --ip=*'
 
-# -- gpc specific bash configurations ----
-export PORTAL=10.128.0.2
-
