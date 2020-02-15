@@ -27,7 +27,7 @@ alias gla='git lola'
 alias gpod='gpo develop'
 alias gpom='gpo master'
 # Git FuggedaboutIt (let's push it live)
-alias gfi='git add -A && git commit -m "Checkpoint." && git push'
+alias gfi='git add -A && git commit -m "Checkpoint $(date)" && git push'
 
 gk() {
                    (gitk > /dev/null 2>&1) &
