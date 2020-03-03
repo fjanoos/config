@@ -85,7 +85,7 @@ conda deactivate
 conda install numpy numba tensorboard arrow joblib pandas matplotlib jupyter memory_profiler pyarrow xarray psycopg2 statsmodels scipy scikit-learn dask tqdm sqlalchemy
 # install torch as required
 conda install pytorch cudatoolkit=10.1 -c pytorch 
-pip install itables p3nvml
+pip install itables p3nvml html2markdown
 conda install -c conda-forge jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
 jupyter nbextension enable codefolding/main
