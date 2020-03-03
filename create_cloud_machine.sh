@@ -52,7 +52,7 @@ ln -s ~/local/tmp -t ~
 sudo apt-get update
 sudo apt-get upgrade
 
-sudo apt-get install git tmux htop gcc g++ make libboost-all-dev openssh-server openssh-client samba smbclient
+sudo apt-get install git tmux htop gcc g++ make libboost-all-dev openssh-server openssh-client samba smbclient html2text
 
 # configure openssh server, and open ports using ufw
 # configure samba server, set password and open ports using ufw
@@ -85,7 +85,7 @@ conda deactivate
 conda install numpy numba tensorboard arrow joblib pandas matplotlib jupyter memory_profiler pyarrow xarray psycopg2 statsmodels scipy scikit-learn dask tqdm sqlalchemy
 # install torch as required
 conda install pytorch cudatoolkit=10.1 -c pytorch 
-pip install itables p3nvml html2markdown
+pip install itables p3nvml
 conda install -c conda-forge jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
 jupyter nbextension enable codefolding/main
