@@ -87,6 +87,8 @@ conda install numpy numba tensorboard arrow joblib pandas matplotlib jupyter mem
 conda install pytorch cudatoolkit=10.1 -c pytorch 
 pip install itables p3nvml pygments
 conda install -c conda-forge jupyter_contrib_nbextensions
+# command line csv viewier ( /> vd ... )
+conda install --channel conda-forge visidata
 jupyter contrib nbextension install --user
 jupyter nbextension enable codefolding/main
 jupyter nbextension enable toggle_all_line_numbers/main
