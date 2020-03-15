@@ -30,8 +30,12 @@
   "keys": {
     "command": {
       "bind": {
-        "f2": "jupyter-notebook:restart-kernel-and-clear-output"
-      }
+        "f2": "jupyter-notebook:restart-kernel-and-clear-output",
+        "shift-enter": "jupyter-notebook:run-cell-and-select-next"
+      },
+      "unbind": [
+        "alt-enter"
+      ]
     }
   },
   "Cell": {
