@@ -82,13 +82,12 @@ chmod au+x Anaconda3-2019.10-Linux-x86_64.sh
 
 ### Install conda packages into main enviroment ###
 conda deactivate
+pip install itables p3nvml pygments cvxpy
 conda install numpy numba tensorboard arrow joblib pandas matplotlib jupyter memory_profiler pyarrow xarray psycopg2 statsmodels scipy scikit-learn dask tqdm sqlalchemy
 # install torch as required
 conda install pytorch cudatoolkit=10.1 -c pytorch 
-pip install itables p3nvml pygments
-conda install -c conda-forge jupyter_contrib_nbextensions
 # command line csv viewier ( /> vd ... )
-conda install --channel conda-forge visidata
+conda install -c conda-forge jupyter_contrib_nbextensions visidata
 jupyter contrib nbextension install --user
 jupyter nbextension enable codefolding/main
 jupyter nbextension enable toggle_all_line_numbers/main
