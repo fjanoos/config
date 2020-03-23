@@ -82,8 +82,8 @@ chmod au+x Anaconda3-2020.02-Linux-x86_64.sh
 
 ### Install conda packages into main enviroment ###
 conda deactivate
-pip install itables p3nvml pygments cvxpy
-conda install numpy numba tensorboard arrow joblib pandas matplotlib jupyter memory_profiler pyarrow xarray psycopg2 statsmodels scipy scikit-learn dask tqdm sqlalchemy
+conda install numpy numba tensorboard arrow joblib pandas matplotlib jupyter memory_profiler pyarrow xarray statsmodels scipy scikit-learn dask tqdm sqlalchemy
+pip install itables p3nvml pygments cvxpy psycopg2
 # install torch as required
 conda install pytorch cudatoolkit=10.1 -c pytorch 
 # command line csv viewier ( /> vd ... )
