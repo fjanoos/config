@@ -51,15 +51,14 @@ ln -s ~/local/tmp -t ~
 
 sudo apt-get update
 sudo apt-get upgrade
-
 sudo apt-get install git tmux htop gcc g++ make libboost-all-dev openssh-server openssh-client samba smbclient html2text tree
 
 # configure openssh server, and open ports using ufw
 # configure samba server, set password and open ports using ufw
-
 # install hibernate / awake utils (pm-hibernate)
+
 # install nvidia drivers from nvidia (cuda , cudnn )
-# update the sleep / awake routines to reset the nvidia drivers on awake as per 999ZZ_nvidia_awake
+sudo apt-get install nvidia-cuda-toolkit
 
 
 ##############################################################################################################
