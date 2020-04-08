@@ -4,8 +4,8 @@
 cd ~
 cp id_rsa* ~/.ssh
 cp cadre_rsa* ~/.ssh
-cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
-cat ~/cadre_rsa.pub >> ~/.ssh/authorized_keys
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+cat ~/.ssh/cadre_rsa.pub >> ~/.ssh/authorized_keys
 # also copy over these file osc_ssh_keys* ~/.ssh if you want
 
 # See https://stackoverflow.com/questions/2419566/best-way-to-use-multiple-ssh-private-keys-on-one-client
