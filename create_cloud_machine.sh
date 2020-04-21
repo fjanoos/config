@@ -37,13 +37,14 @@ ln -s ~/config/.git-prompt.sh -t ~
 ln -s ~/config/.ipython -t ~
 ln -s ~/config/.jupyter -t ~
 ln -s ~/config/.tmux.conf -t ~
-ln -s ~/local/cloud -t ~
-ln -s ~/cloud/code -t ~
-ln -s ~/cloud/notebooks -t ~
+ln -s ~/local/experiments -t ~
 ln -s ~/local/data -t ~
 ln -s ~/local/software -t ~
 ln -s ~/local/tmp -t ~
-
+ln -s ~/local/cloud -t ~
+ln -s ~/cloud/code -t ~
+ln -s ~/cloud/notebooks -t ~
+ln -s ~/code/research -t ~
 
 ##############################################################################################################
 # update linux version 
@@ -82,9 +83,11 @@ chmod au+x Anaconda3-2020.02-Linux-x86_64.sh
 ### Install conda packages into main enviroment ###
 conda deactivate
 conda install numpy numba tensorboard arrow joblib pandas matplotlib jupyter memory_profiler pyarrow xarray statsmodels scipy scikit-learn dask tqdm sqlalchemy
-pip install itables p3nvml pygments cvxpy psycopg2 cupy
+pip install itables pygments cvxpy psycopg2
 # install torch as required
-conda install pytorch cudatoolkit=10.1 -c pytorch 
+conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
+# gpu only machines
+pip install p3nvml cupy
 # command line csv viewier ( /> vd ... )
 conda install -c conda-forge jupyter_contrib_nbextensions visidata
 jupyter contrib nbextension install --user
