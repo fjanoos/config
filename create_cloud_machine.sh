@@ -89,7 +89,7 @@ conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
 # gpu only machines
 pip install p3nvml cupy
 # command line csv viewier ( /> vd ... )
-conda install -c conda-forge jupyter_contrib_nbextensions visidata
+conda install -c conda-forge jupyter_contrib_nbextensions visidata 
 jupyter contrib nbextension install --user
 jupyter nbextension enable codefolding/main
 jupyter nbextension enable toggle_all_line_numbers/main

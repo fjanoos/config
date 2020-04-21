@@ -16,25 +16,36 @@
   "kse_rebinds": {
     "edit": [
       {
-        "action_name": "jupyter-notebook:restart-kernel-and-clear-output",
+        "action_name": "jupyter-notebook:restart-kernel",
         "to": "f2"
-      }
+      },
+      {
+        "action_name": "jupyter-notebook:confirm-restart-kernel-and-clear-output",
+        "to": "f3"
+      } 
     ],
     "command": [
       {
-        "action_name": "jupyter-notebook:restart-kernel-and-clear-output",
+        "action_name": "jupyter-notebook:restart-kernel",
         "to": "f2"
+      },
+      {
+        "action_name": "jupyter-notebook:confirm-restart-kernel-and-clear-output",
+        "to": "f3"
       }
     ]
   },
   "keys": {
     "command": {
       "bind": {
-        "f2": "jupyter-notebook:restart-kernel-and-clear-output",
-        "shift-enter": "jupyter-notebook:run-cell-and-select-next"
+        "shift-enter": "jupyter-notebook:run-cell-and-select-next",
+        "alt-enter": "jupyter-notebook:run-cell",
+        "ctrl-enter": "jupyter-notebook:run-cell",
+        "f3": "jupyter-notebook:confirm-restart-kernel-and-clear-output"
       },
       "unbind": [
-        "alt-enter"
+        "alt-enter",
+        "ctrl-enter"
       ]
     }
   },
