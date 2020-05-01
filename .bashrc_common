@@ -279,14 +279,6 @@ function killps()
 }
 
 
-# find by access time
-
-function untar()
-{
-	for file in `ls *.tar`; 
-		do tar -xvf $file;
-	done;
-}
 
 #create the keys for the localhost
 function create_keys()
@@ -315,6 +307,14 @@ function ssh_keys()
 }
 
 
+function untar()
+{
+  for file in `ls *.tar`; 
+    do tar -xvf $file;
+  done;
+}
+
+
 # Extract many files with one command
 function extract () {
   if [ -f $1 ] ; then
@@ -337,6 +337,27 @@ function extract () {
     echo "'$1' is not a valid file!"
   fi
 }
+
+
+# Compress many files with one command
+function compress  () {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar cvjf $1    ;;
+      *.tar.gz)    tar cvzf $1    ;;
+      *.tar.xz)    tar Jcvf $1    ;;
+      *.bz2)       bzip2 $1     ;;
+      *.gz)        gzip $1      ;;
+      *.tar)       tar cvf $1     ;;
+      *.tbz2)      tar cvjf $1    ;;
+      *.tgz)       tar cvzf $1    ;;
+      *)           echo "don't know how to extract '$1'" ;;
+    esac
+  else
+    echo "'$1' is not a valid file!"
+  fi
+}
+
 
 function up () {
   LIMIT=$1

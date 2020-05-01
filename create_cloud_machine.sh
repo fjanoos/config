@@ -60,6 +60,7 @@ sudo apt-get install git tmux htop gcc g++ make libboost-all-dev openssh-server 
 
 # install nvidia drivers from nvidia (cuda , cudnn )
 sudo apt-get install nvidia-cuda-toolkit
+# alternatively pull teh latest version from https://developer.nvidia.com/cuda-downloads
 
 
 ##############################################################################################################
