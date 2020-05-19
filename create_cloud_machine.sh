@@ -57,6 +57,7 @@ sudo apt-get install git tmux htop gcc g++ make libboost-all-dev openssh-server 
 # configure openssh server, and open ports using ufw
 # configure samba server, set password and open ports using ufw
 # install hibernate / awake utils (pm-hibernate)
+# (optionally) setup rdp (https://linuxize.com/post/how-to-install-xrdp-on-ubuntu-18-04/)
 
 # install nvidia drivers from nvidia (cuda , cudnn )
 sudo apt-get install nvidia-cuda-toolkit
