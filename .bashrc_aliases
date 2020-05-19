@@ -63,6 +63,8 @@ alias egrep='egrep --color=auto'
 # ----- personal linux machine configurations -----
 # start and stop gnome desktop (start/stop)
 alias gnome='sudo service gdm' 
+alias xorg='sudo service lightdm'
+alias xrdp='sudo service xrdp'
 alias sleep='sudo pm-hibernate'
 alias off='sudo shutdown -h now'
 alias reboot='sudo shutdown -r now'
