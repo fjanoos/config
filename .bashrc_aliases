@@ -18,7 +18,7 @@
 #-------------------
 
 #alias rm='rm -i'
-#alias cp='cp -i'
+alias cp='cp -r'
 alias cls='clear'
 alias c='clear'
 alias mv='mv -i'

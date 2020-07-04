@@ -34,3 +34,4 @@ gk() {
    }
 
 
+alias pipfreeze='pip freeze > ~/code/madmax/pip_freeze.txt'

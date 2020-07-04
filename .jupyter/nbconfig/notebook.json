@@ -22,6 +22,10 @@
       {
         "action_name": "jupyter-notebook:confirm-restart-kernel-and-clear-output",
         "to": "f3"
+      },
+      {
+        "action_name": "jupyter-notebook:clear-cell-output",
+        "to": "ctrl-g"
       }
     ],
     "command": [
@@ -32,6 +36,10 @@
       {
         "action_name": "jupyter-notebook:confirm-restart-kernel-and-clear-output",
         "to": "f3"
+      },
+      {
+        "action_name": "jupyter-notebook:clear-cell-output",
+        "to": "ctrl-g"
       }
     ]
   },
@@ -42,11 +50,11 @@
         "alt-enter": "jupyter-notebook:run-cell",
         "ctrl-enter": "jupyter-notebook:run-cell",
         "f3": "jupyter-notebook:confirm-restart-kernel-and-clear-output",
-        "ctrl-l": "jupyter-notebook:clear-cell-output"
+        "ctrl-g": "jupyter-notebook:clear-cell-output"
       },
       "unbind": [
         "alt-enter",
-        "ctrl-enter"
+        "ctrl-l"
       ]
     }
   },
