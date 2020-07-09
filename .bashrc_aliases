@@ -38,6 +38,7 @@ alias background='xv -root -quit -max -rmode 5' # put a picture in the backgroun
 alias vim='gvim'
 alias vi='gvim'
 alias du='du -h'
+alias dut = 'du -d 1 | sort -h'
 alias df='df -kh'
 alias ps='ps -a'
 
@@ -106,10 +107,4 @@ then
 fi
 
 alias ps_me='ps  auxw | egrep `whoami`'
-
-function find-in-files()
-{
-    find . -type f -name '$1' -exec grep -i '$2' {} +
-}
-
 
