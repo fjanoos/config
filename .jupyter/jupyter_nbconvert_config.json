@@ -15,7 +15,8 @@
       "/home/fjanoos/local/conda3/lib/python3.7/site-packages/jupyter_contrib_nbextensions/templates",
       "/home/fjanoos/software/conda/lib/python3.7/site-packages/jupyter_contrib_nbextensions/templates",
       "/home/fj/local/anaconda3/lib/python3.7/site-packages/jupyter_contrib_nbextensions/templates",
-      "/home/fj/anaconda3/lib/python3.7/site-packages/jupyter_contrib_nbextensions/templates"
+      "/home/fj/anaconda3/lib/python3.7/site-packages/jupyter_contrib_nbextensions/templates",
+      "/home/fj/anaconda3/lib/python3.8/site-packages/jupyter_contrib_nbextensions/templates"
     ]
   },
   "version": 1
