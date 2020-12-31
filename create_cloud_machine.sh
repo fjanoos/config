@@ -78,7 +78,7 @@ rsync -axrv fjanoos@$SOURCE_MACHINE:$SOURCE_HOME/data ~
 ##############################################################################################################
 mkdir ~/local/tmp;  cd ~/local/tmp
 #### install conda ###
-wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
 chmod au+x Anaconda3-2020.02-Linux-x86_64.sh
 ./Anaconda3-2020.02-Linux-x86_64.sh # install conda on a fast hardrive
 
