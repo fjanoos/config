@@ -52,7 +52,8 @@ ln -s ~/code/research -t ~
 
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install git tmux htop gcc g++ make libboost-all-dev openssh-server openssh-client samba smbclient html2text tree
+sudo apt-get install git tmux htop html2text tree python3-pip
+sudo apt-get install gcc g++ make libboost-all-dev openssh-server openssh-client samba smbclient 
 
 # configure openssh server, and open ports using ufw
 # configure samba server, set password and open ports using ufw
