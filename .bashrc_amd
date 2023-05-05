@@ -1,0 +1,46 @@
+# FJ common bash configuration
+#--------------------------------
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+. ~/config/.bashrc_common
+. ~/config/.bashrc_aliases
+. ~/config/.git_aliases
+
+#chang the directory color on oakley
+export LS_COLORS=$LS_COLORS'di=0;31:'
+
+export PATH=/usr/local/cuda-11.5/bin/:$PATH
+
+export PYTHONPATH='/home/fj/code'
+export JUPYTER_PATH=$PYTHONPATH:$JUPYTER_PATH
+alias notebook='jupyter notebook --no-browser --ip=*'
+
+### ethereum related rubbish
+export NPM_PACKAGES="${HOME}/.npm-packages" # npm package manager
+export PATH="$NPM_PACKAGES/bin:$PATH"
+export NODE_OPTIONS=--openssl-legacy-provider
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/fj/software/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/fj/software/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/fj/software/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/fj/software/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export GCP=35.185.89.217
+# setup gcp tunnels
+alias gcp_start='ssh -fNTv -L 8888:localhost:8888 -L 8889:localhost:8889 -L 8890:localhost:8890 -L 3049:localhost:2049 $GCP'
+alias gcp='ssh $GCP'
+alias gsync='rsync -axrv  ~/code/ $GCP:~/code/;'
+# to mount the gcp nfs -  follow instructions from here https://gist.github.com/proudlygeek/5721498
+alias gcp_mount='sudo mount -t nfs -o port=3049 localhost:/mnt/main /mnt/gcp'
