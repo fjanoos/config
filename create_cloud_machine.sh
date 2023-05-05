@@ -52,7 +52,8 @@ ln -s ~/code/research -t ~
 
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install git tmux htop gcc g++ make libboost-all-dev openssh-server openssh-client samba smbclient html2text tree
+sudo apt-get install git tmux htop html2text tree python3-pip
+sudo apt-get install gcc g++ make libboost-all-dev openssh-server openssh-client samba smbclient 
 
 # configure openssh server, and open ports using ufw
 # configure samba server, set password and open ports using ufw
@@ -84,8 +85,8 @@ chmod au+x Anaconda3-2020.02-Linux-x86_64.sh
 
 ### Install conda packages into main enviroment ###
 conda deactivate
-conda install numpy numba tensorboard arrow joblib pandas matplotlib jupyter memory_profiler line_profiler pyarrow xarray statsmodels scipy scikit-learn dask tqdm sqlalchemy 
-pip install numbagg bottleneck itables pygments cvxpy psycopg2-binary gitpython cloudpickle
+conda install numpy numba tensorboard arrow joblib pandas matplotlib jupyter memory_profiler line_profiler pyarrow xarray statsmodels scipy scikit-learn dask tqdm sqlalchemy bottleneck gitpython cloudpickle
+pip install numbagg cvxpy cvxpylayers
 # install torch as required
 conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
 # gpu only machines

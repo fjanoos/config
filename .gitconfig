@@ -1,6 +1,6 @@
 [user]
 	email = firdaus@ieee.org
-	name = fjanoos
+	name = fredjames586
 [color]
 	diff = auto
 	status = auto
@@ -10,7 +10,7 @@
 	default = current
 [core]
 	editor = nano
-	excludesfile = ~/.gitignore
+	excludesfile = /home/fredjames586/.gitignore
 [diff]
 	tool = diff
 [merge]
